@@ -1,0 +1,185 @@
+Machine leaning is the science of programming computer science so they can learn from data
+your spam filter is ml program that gives example of spam emails that get flaged by users and non spam called ham
+each traning instance(sample) ,the systems that learn and make predictions is called models
+in this case , the task T is to flag emails for new emails,
+and the training set is the experience E,
+and the performance P is need to ne defined , for example you can use the ratio for classification task
+
+why use ml?
+    1study the problem  2write rules 3evaluate  4 analyze errors
+    loop 4 lunch
+    spam filter learns wich words and phrases are good
+    predictors of spam ex compared to ham ex
+    data->train ml model->evaluate->lunch->updatedata->data....
+    another area ml shines is for problem too comples or have no know algorithm
+    digging into large amount of data to discover hidden patterns is called data minning
+ to summarize ml is great for:
+    problems which existing solutions need finetuning or longlist of rules
+    complex problems for which a traditional approach yields no good solution
+    fluctuaring environments
+    getting insights about complex problems and larges amount of data
+
+
+Examples of Applications
+Let’s look at some concrete examples of machine learning tasks, along with
+the techniques that can tackle them:
+Analyzing images of products on a production line to automatically classify
+them
+This is image classification, typically performed using convolutional
+neural networks (CNNs; see Chapter 14) or sometimes transformers
+(see Chapter 16).
+Detecting tumors in brain scans
+This is semantic image segmentation, where each pixel in the image is
+classified (as we want to determine the exact location and shape of
+tumors), typically using CNNs or transformers.
+Automatically classifying news articles
+This is natural language processing (NLP), and more specifically text
+classification, which can be tackled using recurrent neural networks
+(RNNs) and CNNs, but transformers work even better (see Chapter 16).
+Automatically flagging offensive comments on discussion forums
+This is also text classification, using the same NLP tools.
+Summarizing long documents automatically
+This is a branch of NLP called text summarization, again using the same
+tools.
+Creating a chatbot or a personal assistant
+This involves many NLP components, including natural language
+understanding (NLU) and question-answering modules.
+Forecasting your company’s revenue next year, based on many performance
+metricsThis is a regression task (i.e., predicting values) that may be tackled
+using any regression model, such as a linear regression or polynomial
+regression model (see Chapter 4), a regression support vector machine
+(see Chapter 5), a regression random forest (see Chapter 7), or an
+artificial neural network (see Chapter 10). If you want to take into
+account sequences of past performance metrics, you may want to use
+RNNs, CNNs, or transformers (see Chapters 15 and 16).
+Making your app react to voice commands
+This is speech recognition, which requires processing audio samples:
+since they are long and complex sequences, they are typically processed
+using RNNs, CNNs, or transformers (see Chapters 15 and 16).
+Detecting credit card fraud
+This is anomaly detection, which can be tackled using isolation forests,
+Gaussian mixture models (see Chapter 9), or autoencoders (see
+Chapter 17).
+Segmenting clients based on their purchases so that you can design a
+different marketing strategy for each segment
+This is clustering, which can be achieved using k-means, DBSCAN, and
+more (see Chapter 9).
+Representing a complex, high-dimensional dataset in a clear and insightful
+diagram
+This is data visualization, often involving dimensionality reduction
+techniques (see Chapter 8).
+Recommending a product that a client may be interested in, based on past
+purchases
+This is a recommender system. One approach is to feed past purchases
+(and other information about the client) to an artificial neural network
+(see Chapter 10), and get it to output the most likely next purchase. Thisneural net would typically be trained on past sequences of purchases
+across all clients.
+Building an intelligent bot for a game
+This is often tackled using reinforcement learning (RL; see Chapter 18),
+which is a branch of machine learning that trains agents (such as bots)
+to pick the actions that will maximize their rewards over time (e.g., a
+bot may get a reward every time the player loses some life points),
+within a given environment (such as the game). The famous AlphaGo
+program that beat the world champion at the game of Go was built using
+RL.
+This list could go on and on, but hopefully it gives you a sense of the
+incredible breadth and complexity of the tasks that machine learning can
+tackle, and the types of techniques that you would use for each task.
+
+
+supervised learning:
+    the training set you feed the model have labels
+unsupervised learning:
+    the training data have no labels
+    for ex:you have a lot of data about your blog visitor's,
+    you might use clustring to find the groups that has connection
+    vizualition algorithm are also good for unsupervised learning
+    dimensionality reduction the goal to simplify the data without miss any information
+
+    For example, a car’s mileage
+may be strongly correlated with its age, so the dimensionality reduction
+algorithm will merge them into one feature that represents the car’s wear
+and tear. This is called feature extraction.
+    it is often a good idea to reduce the dimensions in ur training algorithm
+
+    Finally, another common unsupervised task is association rule learning, in
+which the goal is to dig into large amounts of data and discover interesting
+relations between attributes. For example, suppose you own a supermarket.
+Running an association rule on your sales logs may reveal that people who
+purchase barbecue sauce and potato chips also tend to buy steak. Thus, you
+may want to place these items close to one another.
+
+Semi-supervised learning:
+    is dealing with a dataset that has some unlabeled and labeled instances
+
+Self-supervised learning:
+    generating a labeled data from unlabeled one and train it into the supervised algorithm
+    but it still need fine-tunning
+
+Reinforcement learning: is different beast
+    the learning system called agent observe the env,select and perfom actions,and get rewards in return
+    or penalties in the form of negative rewards
+    it must learn by itself what is the best strategy called policy
+
+
+
+Batch learning :
+    the system is incapable of learning incrementely
+    offline learning:train the model and lunch it wihtout training it another time
+    data drift (model rot):when the world evolve and the data change and the model become old
+
+
+    Also, training on the full set of data requires a lot of computing resources
+    (CPU, memory space, disk space, disk I/O, network I/O, etc.). If you have a
+    lot of data and you automate your system to train from scratch every day, it
+    will end up costing you a lot of money. If the amount of data is huge, it may
+    even be impossible to use a batch learning algorithm
+
+
+Online learning:
+    you train the system incrementally by feeding it data
+    instances sequentially,
+    the model lunch into the production and keep learning
+
+    out-of-core learning:if the data set can fit the memory
+    its just chop it into pieces
+    high learning rate->the model adapt rapiditely
+    but also tend to forget the old data
+
+Instance based learning:
+    learn by heart,compare the instances
+
+
+make the model give predictions this called inference
+
+
+Main challenges of ML:
+    unsufficient quantity of training data
+    Nonrepresentive training data (sampling bias(nonresponse bias:mkl5 vote for president election))
+    Poor-Quality data
+    Irrelevant Features(garbage in,garbage out )(the success of ml model is having a good set of features)
+    (feature selection , feature extraction,creating new features by gathering new data)
+
+    Overfitting the training data
+    underfitting
+
+Testing and Validating:
+    if you test ur model and use different hyperparameter,it can be that u just adapted your model on testset
+    Holdout validation:
+    Crossvalidation
+Data mismatch:
+
+No free lunch theorem:
+
+In a famous 1996 paper,⁠9 David Wolpert demonstrated that if you make
+absolutely no assumption about the data, then there is no reason to
+prefer one model over any other. This is called the No Free Lunch
+(NFL) theorem. For some datasets the best model is a linear model,
+while for other datasets it is a neural network. There is no model that is
+a priori guaranteed to work better (hence the name of the theorem). The
+only way to know for sure which model is best is to evaluate them all.
+Since this is not possible, in practice you make some reasonable
+assumptions about the data and evaluate only a few reasonable models.
+For example, for simple tasks you may evaluate linear models with
+various levels of regularization, and for a complex problem you may
+evaluate various neural networks.

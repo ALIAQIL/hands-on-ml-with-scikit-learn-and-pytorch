@@ -1,0 +1,45 @@
+in 2006 geoffry hinton published a paper of a deep neural network trained on handwritten digit with state
+ of precision(98%) , that idea has revived the industry of ml ,most researchers has abandoned this idea in 90s
+ with the help of tremodouis computing power and an great amount of data this field has conquered the industry.
+
+with machine learning you can acomplish and much more projects:
+    segment clients and find the best marketing for each group
+    recomend products based on what similiar clients bought
+    detect wich transcations are likely to be fraudulant
+    forecast next year revenue
+
+we will work with some python libs :
+    sckit-learn: easy use machine learning lib
+    tensor flow: is more complex lib for ditrubitud numerical computation  and run and train a large nn
+    keras: an api integrated in tensor flow to make the running and training of neural network more simple
+
+
+ROADMAP:
+what ml is,what problems tries to solve,and the main categories and fundamental of its systems
+the steps in typical ml project
+learning by fitting a model to data
+optmizing a cost function
+handling,cleaning and preparing the data
+selecting and engineering features
+selecting a model and tunning hyperparameters using cross-validation
+the challenges of ml especially underfitting and overtting
+the most commun ml algorithms:regression linear and polynomial ,knn,support vector machine ,decision tree,random forest,kmeans,and ensemble learning
+reducing the dimension of data to fight the curse of dimensionality
+Other unsupervised learning techniques, including clustering, density estimation, and anomaly detection
+
+what neural nets and what good for
+
+building and training neural nets using tensorflow and keras
+The most important neural net architectures: feedforward neural nets
+for tabular data, convolutional nets for computer vision, recurrent nets
+and long short-term memory (LSTM) nets for sequence processing,
+encoder–decoders and transformers for natural language processing
+(and more!), autoencoders, generative adversarial networks (GANs),
+and diffusion models for generative learning
+
+techniques for training neural nets
+how to build an agent that can learn good strategies through trial and error using reiforcement learning 
+loading and preparing large amounts of data efficienly
+training and deploying tensorflow models at scale
+
+
